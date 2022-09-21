@@ -1,20 +1,12 @@
-var frase = prompt("Escribe una frase");
-var str = frase.replace(/\s/g, '');
-var array1 = str.split("");
+palabra= prompt("escribe una palabra");
+var arr= palabra.split("");
+letra = prompt("escribe una letra");
+var contador=0;
 
-var numeros = 0;
-var total = 0;
-
-var letras = 0;
-
-for (i in array1) {
-    if (!isNaN(array1[i])) {
-        var n = parseInt(array1[i]);
-        total = parseInt(total + n);
-        numeros++;
-    } else {
-        letras++;
+for(i in arr){
+    if(arr[i]==letra){
+        contador++;
     }
 }
 
-document.write("hay un total de " + numeros + " numeros que suman un total de " + total + " y hay un total de " + letras + " letras")
+document.write(contador);
