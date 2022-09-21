@@ -1,17 +1,20 @@
-var frase = prompt("escribe una frase que contenga números");
-
-var array1= frase.split("");
+var frase = prompt("Escribe una frase");
+var str = frase.replace(/\s/g, '');
+var array1 = str.split("");
 
 var numeros = 0;
-var letras="";
+var total = 0;
 
-for(i in array1){
-    if(!isNaN(array1[i])){
-        var n = array1[i];
-        numeros +=n;
-    }else{
-        letras += array1[i];
+var letras = 0;
+
+for (i in array1) {
+    if (!isNaN(array1[i])) {
+        var n = parseInt(array1[i]);
+        total = parseInt(total + n);
+        numeros++;
+    } else {
+        letras++;
     }
 }
 
-document.write("la suma de los números es " + numeros + " y las letras totales son: " + letras);
+document.write("hay un total de " + numeros + " numeros que suman un total de " + total + " y hay un total de " + letras + " letras")
