@@ -12,7 +12,11 @@ for(i in array1){
             numeros.push(1);
         }
         else{
-            
+            for(i in letras[i]){
+                if(letras[i]==letra){
+                    
+                }
+            }
         }
     }
     
