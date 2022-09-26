@@ -1,56 +1,56 @@
 class Dictionary {
-    constructor () {
-      this.items = {}
+    constructor() {
+        this.items = {}
     }
-    
-    has (key) {
-      return this.items.hasOwnProperty(key)	
+
+    has(key) {
+        return this.items.hasOwnProperty(key)
     }
-    
-    set (key, value) {
-      this.items[key] = value
+
+    set(key, value) {
+        this.items[key] = value
     }
-    
-    remove (key) {
-      if (this.has(key)) {
-        delete this.items[key]
-        return true
-      }
-  
-      return false
-    }
-    
-    get (key) {
-      return this.has(key) ? this.items[key] : undefined
-    }
-    
-    values () {
-      const values = []
-      for (let key in this.items) {
+
+    remove(key) {
         if (this.has(key)) {
-          values.push(this.items[key])
+            delete this.items[key]
+            return true
         }
-      }
-      return values
+
+        return false
     }
-  
-    size () {
-      return Object.keys(this.items).length
+
+    get(key) {
+        return this.has(key) ? this.items[key] : undefined
     }
-    
-    keys () {
-      const keys = []
-      for (let keys in this.items) {
-          keys.push(keys)
-      }
-          return keys
-      
-      // La forma corta de hacer esto y abusando de las bondades de javascript
-      // es así:
-      // return Object.keys(this.items)
+
+    values() {
+        const values = []
+        for (let key in this.items) {
+            if (this.has(key)) {
+                values.push(this.items[key])
+            }
+        }
+        return values
     }
-    
-    getItems () {
-      return this.items
+
+    size() {
+        return Object.keys(this.items).length
     }
-  }
+
+    keys() {
+        const keys = []
+        for (let key in this.items) {
+            keys.push(key)
+        }
+        return keys
+
+        // La forma corta de hacer esto y abusando de las bondades de javascript
+        // es así:
+        // return Object.keys(this.items)
+    }
+
+    getItems() {
+        return this.items
+    }
+}
