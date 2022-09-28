@@ -11,8 +11,8 @@ boton.onclick = function() {
 var boton2 = document.getElementById("eliminar");
 
 boton2.onclick = function() {
-    lista = document.getElementsByTagName("li");
-    ultimaPosicion = lista.length-1;
-    lista[ultimaPosicion].parentNode().removeChild(lista[ultimaPosicion]);
+    var lista = document.getElementsByTagName("li");
+    var ultimaPosicion = lista.length-1;
+    lista[ultimaPosicion].parentNode.removeChild(lista[ultimaPosicion]);
 
 }
